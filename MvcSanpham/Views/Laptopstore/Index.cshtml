@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MvcSanpham.Models.SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+@foreach (var sanpham in Model)
+{
+
+        <!-- Product Single -->
+    <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="product product-single">
+            <div class="thumbnail">
+
+                <div class="product-label">
+                    <span>New</span>
+
+                </div>
+
+
+                <a href="@Url.Action("Details", "Laptopstore", new {id = sanpham.MaSP})">
+
+
+                    <img alt="@sanpham.TenSP" src="~/sanpham/@sanpham.Anhbia" width="220" />
+
+                    <div>
+                        <br />
+                        <h4 style="text-align:center">
+                            @sanpham.TenSP
+                        </h4>
+                    </div>
+
+
+                </a>
+
+            </div>
+
+
+            <div class="product-body">
+                <p style="font-weight:bold">Giá Bán: <span style="color: red;font-size:16pt">@sanpham.GiaHienTai VNĐ</span></p>
+              
+
+
+                <div class="product-btns">
+
+
+                    <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+
+
+                    <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+
+                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> GIỎ HÀNG</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <!-- /Product Single -->
+        }

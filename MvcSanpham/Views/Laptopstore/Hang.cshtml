@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MvcSanpham.Models.Hang>
+<div class="menu-nav">
+<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+<ul class="menu-list">
+    @foreach (var item in Model)
+    {
+        <li> <a href="@Url.Action("Sptheohang", "Laptopstore", new {id = item.MaHang})">
+                <img alt="@item.AnhHang" src="~/Images/@item.AnhHang" />
+               
+            </a>
+        </li>
+       
+  
+
+    }
+    <li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages <i class="fa fa-caret-down"></i></a>
+        <ul class="custom-menu">
+            <li>
+                @Html.ActionLink("Trang chủ","Index","Laptopstore")
+            </li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="product-page.html">Product Details</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </li>
+</ul>
+</div>

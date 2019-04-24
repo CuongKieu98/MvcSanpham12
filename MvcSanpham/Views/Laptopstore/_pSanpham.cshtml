@@ -1,0 +1,61 @@
+﻿
+@using MvcSanpham.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<SanPham>
+
+@foreach (var Sanpham in Model)
+{
+    <!-- Product Single -->
+    <div class="col-md-3 col-sm-6 col-xs-6">
+    <div class="product product-single">
+        <div class="thumbnail">
+            <div class="product-label">
+               
+                <span class="sale">HOT</span>
+            </div>
+
+
+            <a href="@Url.Action("Details", "Laptopstore", new {id = Sanpham.MaSP})">
+                <img alt="@Sanpham.TenSP" src="~/sanpham/@Sanpham.Anhbia" width="200" />
+                <div>
+                    <br />
+                    <h3 style="text-align:center">
+                        @Sanpham.TenSP
+                    </h3>
+                </div>
+            </a>
+
+        </div>
+        <div class="product-body">
+            <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+            <div class="product-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o empty"></i>
+            </div>
+
+            <div class="product-btns">
+                <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+                <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+                <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+            </div>
+        </div>
+    </div>
+        </div>
+    
+
+        }
+
+    @*tao lien ket*@
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+
+    </div>
+    <style>
+        .MenuTrang li {
+            display: inline;
+        }
+    </style>

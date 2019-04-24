@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutChitiet.cshtml";
+}
+
+<div class="col-md-6">
+
+        <img src="~/sanpham/@Model.Anhbia" width="400"/>
+    
+   
+</div>
+
+<div class="col-md-6">
+    <div class="product-body">
+        <div class="product-label">
+            
+        </div>
+        <h3>Tên sản phẩm: @Model.TenSP</h3>
+
+
+        <p><strong>Availability:</strong> In Stock</p>
+        <p><strong>Brand:</strong> E-SHOP</p>
+        <p style="text-align: justify"><span style="font-weight:bold">Thông tin sản phẩm:</span>@Model.MoTa</p>
+        <p style="font-weight:bold">Giá Khuyến Mãi: <span style="color: black;font-size:16pt">@Model.GiaHienTai VNĐ</span></p>
+        <p style="font-weight:bold">Giá bán: <span style="color: black;font-size:16pt"><del class="product-old-price">@Model.GiaCu VNĐ</del></span></p>
+        
+            
+       
+
+        <div class="product-btns">
+            <div class="qty-input">
+                <span class="text-uppercase">Số lượng: </span>
+                <input class="input" type="number">
+            </div>
+            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>  <a href="@Url.Action("ThemGiohang", "GioHang", new {@iMaSP = @Model.MaSP, @strURL = Request.Url.ToString()})">
+                Thêm Giỏ Hàng
+            </a></button>
+            <div id="Datmua">
+               
+            </div>
+        </div>
+            <div class="pull-right">
+                <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+                <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+                <button class="main-btn icon-btn"><i class="fa fa-share-alt"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+                

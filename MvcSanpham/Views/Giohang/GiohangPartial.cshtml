@@ -1,0 +1,47 @@
+﻿<!-- Cart -->
+@using MvcSanpham.Models
+@model List<Giohang>
+
+    <li class="header-cart dropdown default-dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+            <div class="header-btns-icon">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="qty">@ViewBag.Tongsoluong</span>
+            </div>
+            <strong class="text-uppercase">Giỏ hàng:</strong>
+            <br>
+            <span>@ViewBag.Tongtien đ</span>
+        </a>
+
+    
+        <div class="custom-menu">
+
+            <div id="shopping-cart">
+
+                <div class="shopping-cart-list">
+
+                    <div class="product product-widget">
+
+                        <div class="product-thumb">
+                            <img src="~/sanpham/@ViewBag.Anhbia">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
+                            <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                        </div>
+                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>
+
+                    </div>
+
+                </div>
+
+                <div class="shopping-cart-btns">
+                    <button class="main-btn">@Html.ActionLink("Giỏ Hàng", "Giohang", "GioHang")</button>
+                    <button class="primary-btn">@Html.ActionLink("Đặt Hàng", "Giohang", "GioHang") <i class="fa fa-arrow-circle-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    
+    </li>
+    <!-- /Cart -->

@@ -4,11 +4,50 @@
     Layout = "~/Views/Shared/_LayoutDK.cshtml";
 }
 
-<h2 style="text-align: center">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+.alert {
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+}
+.alert.info {
+    background-color: #2196F3;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+    </head>
+    <body>
+
+
+    <div class="alert">
+
+        <strong>Thành công!</strong> Đơn hàng đã được xác nhận, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.
+
+    </div>
+
+    </body>
+    </html>
     
-         Cám ơn! Đơn hàng của bạn đã được chúng tôi ghi nhận, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất!
-    
-</h2>
-<p>@Html.ActionLink("Tiếp tục mua sắm", "Index", "Laptopstore")
-</p>
+<button class="primary-btn"><p>@Html.ActionLink("Tiếp tục mua sắm", "Index", "Laptopstore")
+    </p>
+</button>
+
 

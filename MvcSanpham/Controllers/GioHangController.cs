@@ -161,8 +161,8 @@ namespace MvcSanpham.Controllers
             List<Giohang> gh = Laygiohang();
             ddh.MaKH = kh.MaKH;
             ddh.NgayMua = DateTime.Now;
-            var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
-            ddh.NgayGiao = DateTime.Parse(ngaygiao);
+            
+            
             ddh.Dagiao = false;
             ddh.Dathanhtoan = false;
             data.DonDatHangs.InsertOnSubmit(ddh);

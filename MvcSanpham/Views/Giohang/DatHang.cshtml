@@ -52,7 +52,7 @@
                           
                         <tr>
                             <th class="empty" colspan="3"></th>
-                            <th>Giỏ hàng có</th>
+                            <th>Giỏ hàng:</th>
                             <th colspan="2" class="sub-total"> @ViewBag.Tongsoluong sản phẩm</th>
                         </tr>
                            
@@ -120,24 +120,28 @@
 @{
     KhachHang kh = (KhachHang) Session["Taikhoan"];
 }
-<div class="card">
-    <img src="/Images/img_avatar.png" alt="Denim Jeans" style="width:100%">
-    <h1>@kh.HoTen</h1>
-    <p>Số điện thoại:</p>
-    <p class="price">@kh.DienThoai</p>
-    <p>Địa chỉ người nhận:</p>
-    <p>@kh.DiaChi</p>
-    <p>Email:</p>
-    <p>@kh.Email</p>
-    <p>Ngày đặt hàng</p>
-    <p>@DateTime.Now.ToShortDateString()</p>
-    <input type="Submit" value="ĐỒNG Ý ĐẶT HÀNG" />
-    
-</div>
-  
-        
-       
+@using (Html.BeginForm())
+{
 
+    @Html.ValidationSummary(true)
+    <div class="card">
+        <img src="/Images/img_avatar.png" alt="Denim Jeans" style="width:100%">
+        <h1>@kh.HoTen</h1>
+        <p>Số điện thoại:</p>
+        <p class="price">@kh.DienThoai</p>
+        <p>Địa chỉ người nhận:</p>
+        <p>@kh.DiaChi</p>
+        <p>Email:</p>
+        <p>@kh.Email</p>
+        <p>Ngày đặt hàng</p>
+        <p>@DateTime.Now.ToShortDateString()</p>
+
+
+    </div>
+
+    <input type="Submit" value="ĐỒNG Ý ĐẶT HÀNG"/>
+
+}
 </body>
 </html>
 

@@ -40,11 +40,16 @@
                                     <li><span>Size: XL</span></li>
                                     <li><span>Color: Camelot</span></li>
                                 </ul>
+
                             </td>
+                       
+                        {
                             <td class="price text-center">@String.Format("{0:0,0}", item.dGiaHienTai) VNĐ<br><del class="font-weak"><small>$40.00</small></del></td>
-                            <td class="qty text-center"><input class="input" type="number" value="@item.iSoluong" /></td>
-                            <td class="total text-center"><strong class="primary-color">@String.Format("{0:0,0}", item.dThanhtien ) VNĐ</strong></td>
-                            <td class="text-right"><button class="main-btn icon-btn">@Html.ActionLink("x", "XoaGiohang", new { @iMaSp = item.iMaSP })</button></td>
+                            <td class="qty text-center"><input class="input" type="number" value="@item.iSoluong"/></td>
+                            <td class="total text-center"><strong class="primary-color">@String.Format("{0:0,0}", item.dThanhtien) VNĐ</strong></td>
+                            <td class="text-right"><button class="main-btn icon-btn">@Html.ActionLink("x", "XoaGiohang", new {@iMaSp = item.iMaSP})</button></td>
+                           
+                        }
                         </tr>
                             
 

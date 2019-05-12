@@ -1,0 +1,70 @@
+﻿body {
+}
+element.style {
+}
+.viewmore {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    line-height: 40px;
+    font-size: 14px;
+    color: #288ad6;
+    border: 1px solid #eee;
+    text-align: center;
+    border-radius: 3px;
+    margin: 10px auto 20px;
+    width: 240px;
+}
+a {
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+body, input, button, option, textarea, label, legend, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font: 14px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color: #333;
+    outline: none;
+    zoom: 1;
+}
+.viewmore:after {
+    content: '';
+    width: 0;
+    right: 0;
+    border-top: 6px solid #288ad6;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 0 0 5px;
+}
+border-bottom-color:
+rgb(238, 238, 238)
+;
+border-bottom-left-radius:
+3px
+;
+border-bottom-right-radius:
+3px
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+1px
+;
+border-image-outset:
+0px
+;
+border-image-repeat:
+stretch
+;
+border-image-slice:
+100%

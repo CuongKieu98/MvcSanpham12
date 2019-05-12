@@ -21,6 +21,7 @@ namespace MvcSanpham.Controllers
         public ActionResult Index()
         {
             var lapmoi = laylapmoi(7);
+
             return View(lapmoi);
         }
 

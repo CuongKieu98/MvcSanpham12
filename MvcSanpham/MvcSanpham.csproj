@@ -237,6 +237,7 @@
     <Content Include="Content\slick.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Content\view.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -320,6 +321,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\slick.min.js" />
+    <Content Include="Scripts\view.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Shared\index.html" />
     <Content Include="Views\Shared\product-page.html" />

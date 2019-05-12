@@ -3,7 +3,7 @@
 @using PagedList.Mvc;
 @model PagedList.PagedList<SanPham>
 
-@foreach (var Sanpham in Model)
+@foreach (var sanpham in Model)
 {
     <!-- Product Single -->
     <div class="col-md-3 col-sm-6 col-xs-6">
@@ -15,25 +15,25 @@
             </div>
 
 
-            <a href="@Url.Action("Details", "Laptopstore", new {id = Sanpham.MaSP})">
-                <img alt="@Sanpham.TenSP" src="~/sanpham/@Sanpham.Anhbia" width="200" />
+            <a href="@Url.Action("Details", "Laptopstore", new {id = sanpham.MaSP})">
+                <img alt="@sanpham.TenSP" src="~/sanpham/@sanpham.Anhbia" width="200" />
                 <div>
                     <br />
                     <h3 style="text-align:center">
-                        @Sanpham.TenSP
+                        @sanpham.TenSP
                     </h3>
                 </div>
             </a>
 
         </div>
         <div class="product-body">
-            <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+            <p style="font-weight:bold">Giá Bán: <span style="color: red;font-size:16pt">@sanpham.GiaHienTai VNĐ</span></p>
       
 
             <div class="product-btns">
                 <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                
-                <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</button>
+                <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>thêm vao gio</button>
             </div>
         </div>
     </div>
